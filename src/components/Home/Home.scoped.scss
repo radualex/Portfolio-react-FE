@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    #title {
+      font-weight: bold;
+      font-size: 44px;
+      line-height: 60px;
+      color: #21243d;
+    }
+
+    #caption {
+      font-size: 16px;
+      line-height: 23px;
+      color: #21243d;
+      margin: 40px 0 47px 0;
+    }
+
+    button {
+      width: fit-content;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 29px;
+      color: #ffffff;
+      padding: 9px 20px;
+
+      background: #ff6464;
+      border-radius: 2px;
+      outline: none;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+
+      &:active {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .right {
+    img {
+      width: 243px;
+      height: 243px;
+    }
+  }
+}
