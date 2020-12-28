@@ -2,12 +2,12 @@ import React from "react";
 // import logo from "./logo.svg";
 import "./App.scoped.scss";
 
-import { Home } from "./components/Home/Home";
+import { Router } from "./components/Router";
 
 function App() {
   return (
     <div className="container">
-      <Home />
+      <Router />
     </div>
   );
 }
