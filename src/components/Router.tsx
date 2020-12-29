@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import "./Router.scoped.scss";
 
-import { Home } from "./Home/Home";
-import { Work } from "./Work/Work";
+import { Home } from "../pages/Home/Home";
+import { Work } from "../pages/Work/Work";
 
 export function Router() {
   return (
@@ -11,6 +11,9 @@ export function Router() {
       <div>
         <nav>
           <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <Link to="/work">Works</Link>
             </li>

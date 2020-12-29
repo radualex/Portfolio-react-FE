@@ -1,8 +1,8 @@
-.container {
+#container {
   display: flex;
   flex-direction: column;
 
-  .home {
+  #home {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +10,7 @@
       100vh - (27px + 158px + 29px)
     ); // padding top + margin + height of menu)
 
-    .left {
+    #left {
       display: flex;
       flex-direction: column;
       width: 60%;
@@ -53,7 +53,7 @@
       }
     }
 
-    .right {
+    #right {
       img {
         width: 243px;
         height: 243px;
@@ -63,33 +63,50 @@
     }
   }
 
-  .posts {
+  #posts {
     background-color: #edf7fa;
-    height: 396px;
 
     margin-right: -60px;
     margin-left: -148px;
+    padding-bottom: 32px;
 
-    .posts-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
+    #posts-container {
       padding-right: 148px;
       padding-left: 148px;
 
-      margin-top: 27px;
-      margin-bottom: 22px;
+      #posts-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-      #posts-recent {
-        font-size: 22px;
-        color: #21243d;
+        margin-top: 27px;
+        margin-bottom: 22px;
+
+        #posts-recent {
+          font-size: 22px;
+          color: #21243d;
+        }
+
+        #posts-view-all {
+          font-size: 16px;
+          line-height: 23px;
+          color: #00a8cc;
+          user-select: none;
+
+          &:hover {
+            opacity: 0.7;
+            cursor: pointer;
+          }
+
+          &:active {
+            opacity: 0.9;
+          }
+        }
       }
 
-      #posts-view-all {
-        font-size: 16px;
-        line-height: 23px;
-        color: #00a8cc;
+      #posts-cards {
+        display: flex;
+        gap: 20px;
       }
     }
   }

@@ -2,11 +2,13 @@ import React from "react";
 import "./Home.scoped.scss";
 import logo from "../../logo.svg";
 
+import { PostCard } from "../../components/PostCard/PostCard";
+
 export function Home() {
   return (
-    <div className="container">
-      <section className="home">
-        <div className="left">
+    <div id="container">
+      <section id="home">
+        <div id="left">
           <span id="title">Hi, I am John, Creative Technologist</span>
           <span id="caption">
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
@@ -15,14 +17,20 @@ export function Home() {
           </span>
           <button>Download Resume</button>
         </div>
-        <div className="right">
+        <div id="right">
           <img src={logo} alt="my pic" />
         </div>
       </section>
-      <section className="posts">
-        <div className="posts-title">
-          <span id="posts-recent">Recent posts</span>
-          <span id="posts-view-all">View all</span>
+      <section id="posts">
+        <div id="posts-container">
+          <div id="posts-title">
+            <span id="posts-recent">Recent posts</span>
+            <span id="posts-view-all">View all</span>
+          </div>
+          <div id="posts-cards">
+            <PostCard />
+            <PostCard />
+          </div>
         </div>
       </section>
     </div>
