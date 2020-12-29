@@ -1,57 +1,96 @@
 .container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  flex-direction: column;
 
-  .left {
+  .home {
     display: flex;
-    flex-direction: column;
-    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(
+      100vh - (27px + 158px + 29px)
+    ); // padding top + margin + height of menu)
 
-    #title {
-      font-weight: bold;
-      font-size: 44px;
-      line-height: 60px;
-      color: #21243d;
-    }
+    .left {
+      display: flex;
+      flex-direction: column;
+      width: 60%;
 
-    #caption {
-      font-size: 16px;
-      line-height: 23px;
-      color: #21243d;
-      margin: 40px 0 47px 0;
-    }
-
-    button {
-      width: fit-content;
-      font-weight: 500;
-      font-size: 20px;
-      line-height: 29px;
-      color: #ffffff;
-      padding: 9px 20px;
-
-      background: #ff6464;
-      border-radius: 2px;
-      outline: none;
-      border: none;
-
-      &:hover {
-        cursor: pointer;
-        opacity: 0.75;
+      #title {
+        font-weight: bold;
+        font-size: 44px;
+        line-height: 60px;
+        color: #21243d;
       }
 
-      &:active {
-        opacity: 0.9;
+      #caption {
+        font-size: 16px;
+        line-height: 23px;
+        color: #21243d;
+        margin: 40px 0 47px 0;
+      }
+
+      button {
+        width: fit-content;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 29px;
+        color: #ffffff;
+        padding: 9px 20px;
+
+        background: #ff6464;
+        border-radius: 2px;
+        outline: none;
+        border: none;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.75;
+        }
+
+        &:active {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    .right {
+      img {
+        width: 243px;
+        height: 243px;
+        margin: 0 90px 0 0;
+        background-color: black;
       }
     }
   }
 
-  .right {
-    img {
-      width: 243px;
-      height: 243px;
-      margin: 0 90px 0 0;
-      background-color: black;
+  .posts {
+    background-color: #edf7fa;
+    height: 396px;
+
+    margin-right: -60px;
+    margin-left: -148px;
+
+    .posts-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      padding-right: 148px;
+      padding-left: 148px;
+
+      margin-top: 27px;
+      margin-bottom: 22px;
+
+      #posts-recent {
+        font-size: 22px;
+        color: #21243d;
+      }
+
+      #posts-view-all {
+        font-size: 16px;
+        line-height: 23px;
+        color: #00a8cc;
+      }
     }
   }
 }
