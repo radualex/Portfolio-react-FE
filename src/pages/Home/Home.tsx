@@ -19,7 +19,7 @@ export function Home() {
             for ING Bank as a Software Engineer.
           </span>
           <a href={Pdf} target="_blank" rel="noreferrer">
-            <span>Download Resume</span>
+            <span>See my resume</span>
           </a>
         </div>
         <div id="container__home__right">
