@@ -32,13 +32,14 @@
         margin: 40px 0 47px 0;
       }
 
-      button {
+      a {
         width: fit-content;
         font-weight: 500;
         font-size: 20px;
         line-height: 29px;
         color: $resumeBtnTextColor;
         padding: 9px 20px;
+        text-decoration: none;
 
         background: $resumeBtnColor;
         border-radius: 2px;

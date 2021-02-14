@@ -1,10 +1,15 @@
 import React from "react";
 import "./Home.scoped.scss";
 import me from "../../assets/me.png";
+import Pdf from "../../assets/resume.pdf";
 
 // import { PostCard } from "../../components/PostCard/PostCard";
 
 export function Home() {
+  // let _handleOnDownloadResumeBtn = (e: any) => {
+  //   console.log(e);
+  // };
+
   return (
     <div id="container">
       <section id="container__home">
@@ -17,9 +22,9 @@ export function Home() {
             developing high quality websites and applications. Currently working
             for ING Bank as a Software Engineer.
           </span>
-          <button>
+          <a href={Pdf} target="_blank" rel="noreferrer">
             <span>Download Resume</span>
-          </button>
+          </a>
         </div>
         <div id="container__home__right">
           <div id="container__home__right__img">
