@@ -6,10 +6,6 @@ import Pdf from "../../assets/resume.pdf";
 // import { PostCard } from "../../components/PostCard/PostCard";
 
 export function Home() {
-  // let _handleOnDownloadResumeBtn = (e: any) => {
-  //   console.log(e);
-  // };
-
   return (
     <div id="container">
       <section id="container__home">
