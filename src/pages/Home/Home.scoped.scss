@@ -75,7 +75,8 @@
           opacity: 1;
 
           &:active {
-            opacity: 0.8;
+            transition: none;
+            opacity: 0.6;
           }
         }
       }
