@@ -1,27 +1,36 @@
 import React from "react";
 import "./Home.scoped.scss";
-import logo from "../../logo.svg";
+import me from "../../assets/me.png";
 
-import { PostCard } from "../../components/PostCard/PostCard";
+// import { PostCard } from "../../components/PostCard/PostCard";
 
 export function Home() {
   return (
     <div id="container">
-      <section id="home">
-        <div id="left">
-          <span id="title">Hi, I am John, Creative Technologist</span>
-          <span id="caption">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
+      <section id="container__home">
+        <div id="container__home__left">
+          <span id="container__home__left__title">
+            Hi there! This is Radu here.
           </span>
-          <button>Download Resume</button>
+          <span id="container__home__left__caption">
+            I am a software engineer located in Amsterdam specialized in
+            developing high quality websites and applications. Currently working
+            for ING Bank as a Software Engineer.
+          </span>
+          <button>
+            <span>Download Resume</span>
+          </button>
         </div>
-        <div id="right">
-          <img src={logo} alt="my pic" />
+        <div id="container__home__right">
+          <div id="container__home__right__img">
+            <img className="imgStyle" src={me} alt="this is Radu" />
+            <div className="imgStyle" id="container__home__right__img__back">
+              <span>See my work!</span>
+            </div>
+          </div>
         </div>
       </section>
-      <section id="posts">
+      {/* <section id="posts">
         <div id="posts-container">
           <div id="posts-title">
             <span id="posts-recent">Recent posts</span>
@@ -32,7 +41,7 @@ export function Home() {
             <PostCard />
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

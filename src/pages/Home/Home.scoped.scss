@@ -1,31 +1,34 @@
+@import "../../assets/style/colors.scss";
+
 #container {
   display: flex;
   flex-direction: column;
+  height: inherit;
 
-  #home {
+  &__home {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: calc(
-      100vh - (27px + 158px + 29px)
-    ); // padding top + margin + height of menu)
+    height: inherit;
 
-    #left {
+    // height: calc(
+    //   100vh - (27px + 158px + 29px)
+    // ); // padding top + margin + height of menu)
+
+    &__left {
       display: flex;
       flex-direction: column;
       width: 60%;
 
-      #title {
+      &__title {
         font-weight: bold;
         font-size: 44px;
         line-height: 60px;
-        color: #21243d;
       }
 
-      #caption {
+      &__caption {
         font-size: 16px;
         line-height: 23px;
-        color: #21243d;
         margin: 40px 0 47px 0;
       }
 
@@ -34,10 +37,10 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 29px;
-        color: #ffffff;
+        color: $resumeBtnTextColor;
         padding: 9px 20px;
 
-        background: #ff6464;
+        background: $resumeBtnColor;
         border-radius: 2px;
         outline: none;
         border: none;
@@ -53,61 +56,116 @@
       }
     }
 
-    #right {
-      img {
-        width: 243px;
-        height: 243px;
-        margin: 0 90px 0 0;
-        background-color: black;
-      }
-    }
-  }
+    &__right {
+      position: relative;
+      margin: 0 90px 0 0;
+      perspective: 900px;
+      width: 243px;
+      height: 243px;
+      border-radius: 50%;
 
-  #posts {
-    background-color: #edf7fa;
-
-    margin-right: -60px;
-    margin-left: -148px;
-    padding-bottom: 32px;
-
-    #posts-container {
-      padding-right: 148px;
-      padding-left: 148px;
-
-      #posts-title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        margin-top: 27px;
-        margin-bottom: 22px;
-
-        #posts-recent {
-          font-size: 22px;
-          color: #21243d;
+      &:hover {
+        img {
+          transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+          opacity: 0;
         }
 
-        #posts-view-all {
-          font-size: 16px;
-          line-height: 23px;
-          color: #00a8cc;
-          user-select: none;
-
-          &:hover {
-            opacity: 0.7;
-            cursor: pointer;
-          }
+        #container__home__right__img__back {
+          transform: rotate3d(1, 0, 0, 0deg);
+          opacity: 1;
 
           &:active {
-            opacity: 0.9;
+            opacity: 0.8;
           }
         }
       }
 
-      #posts-cards {
-        display: flex;
-        gap: 20px;
+      &__img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+
+        .imgStyle {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-position: center center;
+          transition: all 0.4s linear;
+          transform-origin: 50% 0%;
+        }
+
+        &__back {
+          transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+          background: $resumeBtnColor;
+          opacity: 0;
+          display: flex !important;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          cursor: pointer;
+          user-select: none;
+
+          span {
+            color: $resumeBtnTextColor;
+            letter-spacing: 2px;
+            font-size: 24px;
+            margin: 0 15px;
+            padding: 60px 0 0 0;
+            height: 110px;
+          }
+        }
       }
     }
   }
+
+  // #posts {
+  //   background-color: #edf7fa;
+
+  //   margin-right: -60px;
+  //   margin-left: -148px;
+  //   padding-bottom: 32px;
+
+  //   #posts-container {
+  //     padding-right: 148px;
+  //     padding-left: 148px;
+
+  //     #posts-title {
+  //       display: flex;
+  //       justify-content: space-between;
+  //       align-items: center;
+
+  //       margin-top: 27px;
+  //       margin-bottom: 22px;
+
+  //       #posts-recent {
+  //         font-size: 22px;
+  //         color: #21243d;
+  //       }
+
+  //       #posts-view-all {
+  //         font-size: 16px;
+  //         line-height: 23px;
+  //         color: #00a8cc;
+  //         user-select: none;
+
+  //         &:hover {
+  //           opacity: 0.7;
+  //           cursor: pointer;
+  //         }
+
+  //         &:active {
+  //           opacity: 0.9;
+  //         }
+  //       }
+  //     }
+
+  //     #posts-cards {
+  //       display: flex;
+  //       gap: 20px;
+  //     }
+  //   }
+  // }
 }

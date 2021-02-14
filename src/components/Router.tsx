@@ -8,7 +8,7 @@ import { Work } from "../pages/Work/Work";
 export function Router() {
   return (
     <BrowserRouter>
-      <div>
+      <div style={{ height: "100%" }}>
         <nav>
           <ul>
             <li>
