@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "./logo.svg";
 import "./App.scoped.scss";
 
 import { Router } from "./components/Router";
