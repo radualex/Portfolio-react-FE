@@ -9,12 +9,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 
   color: $fontColor;
-  background-image: $backgroundImg;
-  background-repeat: no-repeat;
-  background-blend-mode: overlay;
+  // background-image: $backgroundImg;
+  // background-repeat: no-repeat;
+  // background-blend-mode: overlay;
 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  // -webkit-background-size: cover;
+  // -moz-background-size: cover;
+  // -o-background-size: cover;
+  // background-size: cover;
 }

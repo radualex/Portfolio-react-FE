@@ -1,0 +1,26 @@
+@import "../../assets//style/colors.scss";
+
+$paddingTop: 27px;
+$paddingBottom: 0px;
+$paddingRight: 60px;
+$paddingLeft: 148px;
+
+#container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
+
+  background-image: $backgroundImg;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

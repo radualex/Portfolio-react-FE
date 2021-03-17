@@ -1,0 +1,115 @@
+@import "../../assets/style/colors.scss";
+
+#landing {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    &__title {
+      font-weight: bold;
+      font-size: 44px;
+      line-height: 60px;
+    }
+
+    &__caption {
+      font-size: 16px;
+      line-height: 23px;
+      margin: 40px 0 47px 0;
+    }
+
+    a {
+      width: fit-content;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 29px;
+      color: $resumeBtnTextColor;
+      padding: 9px 20px;
+      text-decoration: none;
+
+      background: $resumeBtnColor;
+      border-radius: 2px;
+      outline: none;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.75;
+      }
+
+      &:active {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  &__right {
+    position: relative;
+    margin: 0 90px 0 0;
+    perspective: 900px;
+    width: 243px;
+    height: 243px;
+    border-radius: 50%;
+
+    &:hover {
+      img {
+        transform: translate3d(0, 280px, 0) rotate3d(1, 0, 0, -90deg);
+        opacity: 0;
+      }
+
+      #landing__right__img__back {
+        transform: rotate3d(1, 0, 0, 0deg);
+        opacity: 1;
+
+        &:active {
+          transition: none;
+          opacity: 0.6;
+        }
+      }
+    }
+
+    &__img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+
+      .imgStyle {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-position: center center;
+        transition: all 0.4s linear;
+        transform-origin: 50% 0%;
+      }
+
+      &__back {
+        transform: translate3d(0, 0, -220px) rotate3d(1, 0, 0, 90deg);
+        background: $resumeBtnColor;
+        opacity: 0;
+        display: flex !important;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        cursor: pointer;
+        user-select: none;
+
+        span {
+          color: $resumeBtnTextColor;
+          letter-spacing: 2px;
+          font-size: 24px;
+          margin: 0 15px;
+          padding: 60px 0 0 0;
+          height: 110px;
+        }
+      }
+    }
+  }
+}

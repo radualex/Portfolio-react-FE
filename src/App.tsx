@@ -4,11 +4,7 @@ import "./App.scoped.scss";
 import { Router } from "./components/Router";
 
 function App() {
-  return (
-    <div className="container">
-      <Router />
-    </div>
-  );
+  return <Router />;
 }
 
 export default App;

@@ -1,10 +1,10 @@
-$paddingTop: 27px;
-$paddingBottom: 0px;
-$paddingRight: 60px;
-$paddingLeft: 148px;
+// $paddingTop: 27px;
+// $paddingBottom: 0px;
+// $paddingRight: 60px;
+// $paddingLeft: 148px;
 
-.container {
-  width: calc(100vw - #{$paddingRight + $paddingLeft});
-  height: calc(100vh - #{$paddingTop + $paddingBottom});
-  padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
-}
+// .container {
+//   width: calc(100vw - #{$paddingRight + $paddingLeft});
+//   height: calc(100vh - #{$paddingTop + $paddingBottom});
+//   padding: $paddingTop $paddingRight $paddingBottom $paddingLeft;
+// }
