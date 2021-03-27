@@ -1,0 +1,23 @@
+#container {
+  height: 30%;
+  #wrapper {
+    display: flex;
+    height: 100%;
+    img {
+      // width: 30rem;
+      // height: 14rem;
+      // height: auto;
+      // width: auto;
+      margin: 0 1rem 0.8rem 0;
+      border-radius: 1rem;
+      object-fit: contain;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .separator {
+    border: 0.1px solid #e0e0e0;
+    margin: 0 0 1rem 0;
+  }
+}

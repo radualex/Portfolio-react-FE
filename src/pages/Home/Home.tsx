@@ -8,7 +8,7 @@ export const Home = () => {
   return (
     <React.Fragment>
       <Landing />
-      {/* <Work /> */}
+      <Work />
     </React.Fragment>
   );
 };

@@ -1,9 +1,9 @@
 @import "../../assets//style/colors.scss";
 
-$paddingTop: 27px;
+$paddingTop: 5rem;
 $paddingBottom: 0px;
-$paddingRight: 60px;
-$paddingLeft: 148px;
+$paddingRight: 10rem;
+$paddingLeft: 10rem;
 
 #container {
   display: flex;
@@ -23,4 +23,8 @@ $paddingLeft: 148px;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.gap-16 {
+  gap: 16px;
 }

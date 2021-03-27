@@ -1,12 +1,15 @@
 @import "./assets/style/colors.scss";
 
-body {
+body,
+h2,
+img {
   margin: 0;
   font-family: Heebo;
   font-style: normal;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 
   color: $fontColor;
   // background-image: $backgroundImg;
