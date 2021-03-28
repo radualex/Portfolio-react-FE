@@ -4,15 +4,46 @@
     display: flex;
     height: 100%;
     img {
-      // width: 30rem;
-      // height: 14rem;
-      // height: auto;
-      // width: auto;
-      margin: 0 1rem 0.8rem 0;
+      margin: 0 1.13rem 0.8rem 0;
       border-radius: 1rem;
-      object-fit: contain;
-      max-width: 100%;
-      max-height: 100%;
+      width: 25%;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      justify-content: space-between;
+
+      &__title {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 44px;
+      }
+
+      &__header {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        &__year {
+          border-radius: 16px;
+          padding: 0.1rem 0.5rem;
+          background: white;
+          color: #142850;
+          font-weight: 900;
+          font-size: 1.1rem;
+        }
+
+        &__project {
+          font-size: 1.1rem;
+          color: #8695a4;
+        }
+      }
+
+      &__description {
+        line-height: 23px;
+      }
     }
   }
 
