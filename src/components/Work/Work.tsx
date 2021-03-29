@@ -6,7 +6,7 @@ import { WorkItem } from "../WorkItem/WorkItem";
 
 export const Work = () => {
   return (
-    <Container classNames="gap-24">
+    <Container classNames="gap-24" height="auto">
       <WorkItem />
       <WorkItem />
       <WorkItem />
