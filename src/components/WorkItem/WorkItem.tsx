@@ -1,24 +1,35 @@
 import React from "react";
-import me from "../../assets/me.png";
+// import me from "../../assets/me.png";
 
 import "./WorkItem.scoped.scss";
 
-export const WorkItem = () => {
+interface Props extends React.HTMLProps<HTMLElement> {
+  title: string;
+  year: number;
+  project: string;
+  description: string;
+  picture?: string;
+}
+
+export const WorkItem: React.FunctionComponent<Props> = ({
+  title,
+  year,
+  project,
+  description,
+  picture,
+  ...props
+}) => {
   return (
     <div id="container">
       <div id="wrapper">
-        <img src={me} alt="project" />
+        <img src={picture} alt="project" />
         <div className="content">
-          <h2 className="content__title">Hello!</h2>
+          <h2 className="content__title">{title}</h2>
           <div className="content__header">
-            <span className="content__header__year">2021</span>
-            <span className="content__header__project">Dashboard</span>
+            <span className="content__header__year">{year}</span>
+            <span className="content__header__project">{project}</span>
           </div>
-          <p className="content__description">
-            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
-            sint. Velit officia consequat duis enim velit mollit. Exercitation
-            veniam consequat sunt nostrud amet.
-          </p>
+          <p className="content__description">{description}</p>
         </div>
       </div>
       <hr className="separator" />

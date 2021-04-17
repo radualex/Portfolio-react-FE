@@ -1,7 +1,6 @@
 import React from "react";
 import "./Landing.scoped.scss";
 import me from "../../assets/me.png";
-import Pdf from "../../assets/resume.pdf";
 
 import { Container } from "../Container/Container";
 
@@ -16,7 +15,7 @@ export const Landing = () => {
             developing high quality websites and applications. Currently working
             for ING Bank as a Software Engineer.
           </span>
-          <a href={Pdf} target="_blank" rel="noreferrer">
+          <a href="/resume.pdf" target="_blank" rel="noreferrer">
             <span>See my resume</span>
           </a>
         </div>

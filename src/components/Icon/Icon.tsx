@@ -8,7 +8,7 @@ interface IconProps {
 
 export const Icon = (props: IconProps) => {
   return (
-    <a href={props.url}>
+    <a href={props.url} target="_blank" rel="noreferrer">
       <img
         style={{ width: "30px", height: "30px" }}
         src={props.image}

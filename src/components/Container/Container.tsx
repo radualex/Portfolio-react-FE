@@ -5,16 +5,24 @@ interface ContainerProps extends React.PropsWithChildren<{}> {
   classNames?: string;
   width?: string;
   height?: string;
+  backgroundImage?: string;
 }
 
-export const Container = (props: ContainerProps) => {
+export const Container: React.FunctionComponent<ContainerProps> = ({
+  classNames,
+  width,
+  height,
+  backgroundImage,
+  children,
+  ...props
+}) => {
   return (
     <div
       id="container"
-      className={`${props.classNames}`}
-      style={{ width: props.width, height: props.height }}
+      className={`${classNames}`}
+      style={{ width: width, height: height, backgroundImage: backgroundImage }}
     >
-      {props.children}
+      {children}
     </div>
   );
 };
