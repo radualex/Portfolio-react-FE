@@ -1,52 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/man-technologist_1f468-200d-1f4bb.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/man-technologist_1f468-200d-1f4bb.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
-      rel="stylesheet"
-    />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radu-Alexandru Stoica - Portoflio</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <main>
+    <header>
+        <img src="i/avatar.png" alt="Avatar" class="avatar">
+        <div class="header-content">
+          <h1>👋 My name is Radu </h1>
+          <div class="subtitle">
+            Software engineer <span class="dot">•</span>
+            Mostly Javascript & Typescript <span class="dot">•</span>
+            Now in Amsterdam, The Netherlands <span role="img" aria-label="The Netherlands">🇳🇱</span> <span class="dot">•</span>
+            From Onești, Romania <span role="img" aria-label="Romania">🇷🇴</span>
+          </div>
+          <div class="contacts">
+            <a href="https://github.com/radualex" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <img src="i/logo_github.svg" alt="GitHub" />
+              </span>
+              <span>GitHub</span>
+            </a>
+            <a href="https://twitter.com/iamradualex" target="_blank" rel="noopener noreferrer">
+              <span class="icon">
+                <img src="i/logo_twitter.svg" alt="Twitter" />
+              </span>
+              <span>Twitter</span>
+            </a>
+            <a href="i/resume.pdf" target="_blank" rel="noreferrer">
+              <span class="icon">
+                <img src="i/logo_pdf.svg" alt="Resume" />
+              </span>
+              <span>Resume</span>
+            </a>
+          </div>
+        </div>
+        </div>
+      </header>
+    <section>
+      <h2>My Coding Activity & Stats</h2>
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>Radu's</title>
-  </head>
-  <body style="margin: 0; padding: 0;">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+      <codersrank-summary 
+       class="widget"
+       username="radualex" 
+       show-header="false"
+       branding="false"
+      ></codersrank-summary>
+      <div class="widget activity-widget">
+        <codersrank-activity
+          username="radualex"
+          legend="false"
+          labels
+          tooltip
+          step="5"
+          svg-width="1120"
+          branding="false"
+        ></codersrank-activity>
+      </div>
+      
+      <codersrank-skills-chart
+        class="widget"
+        username="radualex"
+        legend="false"
+        tooltip
+        labels
+        skills="JavaScript,SCSS,Less,Vue,TypeScript,CSS,HTML,C#"
+        svg-width="1120"
+        svg-height="400"
+        branding="false"
+      ></codersrank-skills-chart>
+    </section>
+    <section>
+      <h2>Recent Projects</h2>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+      <codersrank-portfolio
+        class="widget"
+        username="radualex"
+        grid
+        company="false"
+        branding="false"
+        dates="false"
+      ></codersrank-portfolio>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+    </section>
+    <section>
+      <h2>Work Experience & Education</h2>
+
+      <codersrank-work-experience
+        class="widget"    
+        username="radualex"
+        logos
+        branding="false"
+      ></codersrank-work-experience>
+
+      <codersrank-education
+        class="widget"
+        username="radualex"
+        branding="false"
+      ></codersrank-education>
+    </section>
+
+    <footer>
+        <p>Powered by <a href="https://profile.codersrank.io/user/radualex" target="_blank" rel="noopener noreferrer">CodersRank</a></p> <span class="dot dot-footer">•</span>
+        <p>Credit to <a href="https://blog.codersrank.io/create-a-developer-website-in-under-60-mins-for-free" target="_blank" rel="noopener noreferrer">Vladimir Kharlampidi</a></p>
+    </footer>
+  </main>
+
+  <script src="https://unpkg.com/@codersrank/summary/codersrank-summary.min.js"></script>
+  <script src="https://unpkg.com/@codersrank/activity/codersrank-activity.min.js"></script>
+  <script src="https://unpkg.com/@codersrank/skills-chart/codersrank-skills-chart.min.js"></script>
+  <script src="https://unpkg.com/@codersrank/portfolio/codersrank-portfolio.min.js"></script>
+  <script src="https://unpkg.com/@codersrank/work-experience/codersrank-work-experience.min.js"></script>
+  <script src="https://unpkg.com/@codersrank/education/codersrank-education.min.js"></script>
+
+</body>
 </html>
